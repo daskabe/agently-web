@@ -137,7 +137,8 @@ img {
 }
 
 .hero-section,
-.docs-hero {
+.docs-hero,
+.support-hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 32px;
@@ -146,7 +147,9 @@ img {
 
 .hero-section__copy,
 .docs-hero__content,
+.support-hero__content,
 .docs-tabs__content,
+.support-card,
 .store-card,
 .step-card {
   animation: rise-in 560ms ease both;
@@ -293,7 +296,8 @@ img {
 
 .store-card,
 .step-card,
-.docs-tabs__content {
+.docs-tabs__content,
+.support-card {
   padding: 28px;
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -315,6 +319,11 @@ img {
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
+}
+
+.support-hero__visual {
+  display: grid;
+  gap: 18px;
 }
 
 .docs-hero__visual img {
@@ -384,6 +393,37 @@ img {
   margin: 0 0 20px;
 }
 
+.support-stack {
+  display: grid;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.support-card h2,
+.support-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+}
+
+.support-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.support-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.support-link {
+  color: var(--brand);
+}
+
+.support-link:hover,
+.support-link:focus-visible {
+  color: #ffd29a;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -419,6 +459,7 @@ img {
 @media (max-width: 960px) {
   .hero-section,
   .docs-hero,
+  .support-hero,
   .store-grid,
   .steps-grid {
     grid-template-columns: 1fr;
@@ -454,7 +495,8 @@ img {
   }
 
   .hero-title,
-  .docs-hero h1 {
+  .docs-hero h1,
+  .support-hero h1 {
     font-size: clamp(2.2rem, 12vw, 3.5rem);
   }
 
@@ -468,7 +510,8 @@ img {
 
   .store-card,
   .step-card,
-  .docs-tabs__content {
+  .docs-tabs__content,
+  .support-card {
     padding: 22px;
   }
 }
